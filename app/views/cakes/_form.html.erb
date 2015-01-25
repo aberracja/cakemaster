@@ -1,0 +1,29 @@
+<%= form_for(@cake) do |f| %>
+  <% if @cake.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cake.errors.count, "error") %> prohibited this cake from being saved:</h2>
+
+      <ul>
+      <% @cake.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.select :cake_type, options_for_select([['non-gluten'], ['tasty']], :selected => :cake_type) %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
