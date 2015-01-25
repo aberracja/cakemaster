@@ -44,6 +44,7 @@ class CakesController < ApplicationController
   # DELETE /cakes/1.json
   def destroy
     @cake.destroy
+    redirect_to cakes_url, notice: 'recipe was successfully destroyed.'
   end
 
   private
