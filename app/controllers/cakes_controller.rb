@@ -24,15 +24,20 @@ class CakesController < ApplicationController
   def create
     @cake = Cake.new(cake_params)
     if @cake.save
-    redirect_to :action => :index
-  else
-    render 'new'
-  end
+      redirect_to :action => :index
+    else
+      render 'new'
+    end
   end
 
   # PATCH/PUT /cakes/1
   
   def update
+    if @cake.save
+      redirect_to :action => :index
+    else
+      render 'edit'
+    end
   end
 
   # DELETE /cakes/1
