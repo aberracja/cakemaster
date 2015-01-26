@@ -24,7 +24,7 @@ class CakesController < ApplicationController
   def create
     @cake = Cake.new(cake_params)
     if @cake.save
-      redirect_to :action => :index
+      redirect_to root_url
     else
       render 'new'
     end
@@ -33,8 +33,8 @@ class CakesController < ApplicationController
   # PATCH/PUT /cakes/1
   
   def update
-    if @cake.save
-      redirect_to :action => :index
+    if @cake.update(cake_params)
+      redirect_to root_url
     else
       render 'edit'
     end
