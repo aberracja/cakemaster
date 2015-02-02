@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+6.times do |i|
+  Cake.create(name: "Cake ##{i}", cake_type: "gluten-free", description: "Description: 
+You need: 
+200g flour 
+150g sugar 
+100g butterflies
+6 golden eggs 
+2 teaspoons sturdust 
+1 teaspoon baking soda 
+
+directions: 
+1. Mix all! 
+2. Bake in the preheated oven at 160°C for 30-40 minutes.")
+end
