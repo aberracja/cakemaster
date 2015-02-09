@@ -1,3 +1,9 @@
+GIT
+  remote: http://github.com/rmagick/rmagick.git
+  revision: 79e1708c7f6792a3a90cb8cb3ffaeb74c58e092e
+  specs:
+    rmagick (2.13.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -29,6 +35,11 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     builder (3.2.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -115,6 +126,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  carrierwave
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
@@ -122,6 +134,7 @@ DEPENDENCIES
   puma
   rails (= 4.1.8)
   rails_12factor
+  rmagick (= 2.13.2)!
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring

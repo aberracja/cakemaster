@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= image_tag @cake.picture.url(:thumb) if @cake.picture? %>
+  <%= image_tag @cake.picture.url(:small_thumb) if @cake.picture? %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @cake.name %>
 </p>

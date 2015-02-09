@@ -37,3 +37,6 @@ gem 'puma'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'carrierwave'
+gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
+
