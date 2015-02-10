@@ -6,8 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+user = User.create(email: "example@email.com", password: "password")
+
 6.times do |i|
-  Cake.create(name: "Cake ##{i}", cake_type: "gluten-free", description: "Description: 
+  user.cakes.create(name: "Cake ##{i}", cake_type: "gluten-free", description: "Description: 
 You need: 
 200g flour 
 150g sugar 

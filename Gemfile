@@ -39,4 +39,7 @@ gem 'puma'
 
 gem 'carrierwave'
 gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
+gem 'carrierwave-dropbox'
+
+gem 'devise', '~> 3.4.1'
 

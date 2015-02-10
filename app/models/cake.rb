@@ -4,4 +4,6 @@ class Cake < ActiveRecord::Base
 	validates :description, presence: true, length: { minimum: 10, maximum: 5000 }
 	
 	mount_uploader :picture, PictureUploader
+
+	belongs_to :user
 end
