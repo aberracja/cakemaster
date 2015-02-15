@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
   validates :name, presence: true
 
   has_many :cakes
-
+  has_many :comments
 end

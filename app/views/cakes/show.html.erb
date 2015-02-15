@@ -13,7 +13,7 @@
 <p>
   <strong>Type:</strong>
   <%= @cake.cake_type %>
-</p>
+</p>edit
 
 <p>
   <strong>Description:</strong>
@@ -22,3 +22,7 @@
 
 <%= link_to 'Edit', edit_cake_path(@cake) %> |
 <%= link_to 'Back', cakes_path %>
+
+<%= render partial: "comments/comments", locals: {commentable: @cake} %>
+<%= render partial: "comments/form", locals: {commentable: @cake} %>
+

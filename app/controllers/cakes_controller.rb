@@ -1,5 +1,6 @@
 class CakesController < ApplicationController
   before_action :set_cake, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @cakes = Cake.all
@@ -22,7 +23,7 @@ class CakesController < ApplicationController
   # POST /cakes
   
   def create
-    @cake = Cake.new(cake_params)
+    @cake = current_user.cakes.new(cake_params)
     if @cake.save
       redirect_to root_url
     else
