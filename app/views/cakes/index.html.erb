@@ -4,14 +4,16 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th colspan="1"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @cakes.each do |cake| %>
       <tr>
-        <td><%= link_to cake.name, edit_cake_path(cake) %></td>
+        <td><%= link_to cake.name, cake_path(cake) %></td>
+        <td><small>(<%= pluralize cake.comments.size, "comment" %>)</small></td>
+        <td><%= link_to 'Edit', edit_cake_path(cake) %></td>
         <td><%= link_to 'Delete', cake, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -21,3 +23,5 @@
 <br>
 
 <%= link_to 'New Cake', new_cake_path %>
+
+
