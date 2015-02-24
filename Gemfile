@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'shoulda'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
