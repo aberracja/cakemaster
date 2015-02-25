@@ -31,8 +31,6 @@ describe User do
 
 	describe "relationships" do
 
-		 # it {expect have_many :cakes}
-		# it {expect have_many(:comments)}
 	 it { should have_many :cakes }
 	 it { should have_many :comments }
 

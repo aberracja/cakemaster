@@ -7,4 +7,16 @@ class User < ActiveRecord::Base
 
   has_many :cakes
   has_many :comments
+
+  after_create :welcome_email
+
+  private
+
+  def welcome_email
+    UserMailer.welcome_email(self).deliver 
+    # flash[:notice] = "You've got a mail!"
+  end
 end
+
+
+
